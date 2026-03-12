@@ -95,7 +95,7 @@ Company → Account
 
 ## Salesforce Migration Tools
 
-I explored common tools used for Salesforce data migration such as:
+Common tools used for Salesforce data migration such as:
 
 * **Salesforce Data Import Wizard**
 * **Salesforce Data Loader**
@@ -137,12 +137,6 @@ A user submits a website form → A lead is instantly created in Salesforce.
 
 ---
 
-## Salesforce APIs
-
-I also studied **Salesforce APIs**, which allow applications to automatically **send and receive data from Salesforce**.
-
-APIs are important for **system integrations**, where multiple applications communicate with Salesforce.
-
 ---
 
 ## Challenges in Data Migration
@@ -165,30 +159,6 @@ Account → Contact
 Accounts must be created first because **contacts belong to accounts**.
 
 ---
-
-## Datamatter Technologies Platform
-
-I explored the **Datamatter Technologies platform**, which helps companies migrate, manage, and protect data between systems.
-
-Datamatter includes modules such as:
-
-* **Gravity** → Data migration
-* **Echo** → Backup and recovery
-* **Nexus** → Workflow orchestration
-
-### Typical Datamatter Workflow
-
-```
-Source System
-      ↓
-Extract Data
-      ↓
-Validate / Clean Data
-      ↓
-Field Mapping
-      ↓
-Load into Salesforce
-```
 
 ---
 
