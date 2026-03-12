@@ -243,10 +243,7 @@ This improves readability of numerical results.
 * CSV Files
 * Batch Migration
 * Real-Time Integration
-* Salesforce APIs
 * Migration Challenges
-* Migration Order in Salesforce
-* Datamatter Platform Modules
 * WITH Clause (CTE)
 * Scalar Subqueries
 * Percent of Total Calculations
