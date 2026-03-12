@@ -1,73 +1,286 @@
-## Intern Information
-
-Name: Pavan S
-Role: Python Developer Intern
-Organization: Datamatter Technologies
-Focus Area: Data Migration & Data Engineering
-Start Date: 12 March 2026
-
-You can record **Day 1 learning** in your README like this in a clean and professional format.
 
 ---
+
+# Data Engineering Internship Learning Log
+
+## Intern Information
+
+**Name:** Pavan S
+**Role:** Python Developer Intern
+**Organization:** Datamatter Technologies
+**Focus Area:** Data Migration & Data Engineering
+**Start Date:** 12 March 2026
+
+---
+
+# Daily Learning Tracker
 
 ## Day 1 – Introduction to Data and Data Migration
 
 **Date:** 10 March 2026
 
-Today I started learning the basic concepts related to data and data migration. Data refers to information stored in digital form such as databases, Excel sheets, CSV files, APIs, or cloud storage. For example, a table containing names, emails, and phone numbers is considered data.
+Today I started learning the basic concepts related to **data and data migration**. Data refers to information stored in digital form such as databases, Excel sheets, CSV files, APIs, or cloud storage. For example, a table containing names, emails, and phone numbers is considered data.
 
-I learned that **data migration** is the process of moving data from one system to another. This is commonly done when companies move their data from older systems to newer platforms such as Salesforce.
+I learned that **data migration** is the process of moving data from one system to another. This is commonly done when companies move their data from older systems to newer platforms such as **Salesforce**.
 
-Companies perform data migration for several reasons such as upgrading systems, moving infrastructure to the cloud, merging with other organizations, improving performance, or replacing outdated applications with new ones.
+Companies perform data migration for several reasons such as:
 
-Another important concept I learned is **ETL**, which stands for Extract, Transform, and Load. This is the common workflow used in data migration and data pipelines.
+* Upgrading systems
+* Moving infrastructure to the cloud
+* Merging with other organizations
+* Improving performance
+* Replacing outdated applications with new ones
 
-In the **Extract** stage, data is collected from the source system such as databases, Excel files, APIs, or CRM systems.
-In the **Transform** stage, the data is cleaned and prepared by removing duplicates, fixing incorrect formats, correcting missing values, and standardizing the data.
-In the **Load** stage, the cleaned data is inserted into the target system such as a database, data warehouse, or Salesforce.
+Another important concept I learned is **ETL**, which stands for:
 
-I also learned about **Salesforce**, which is a cloud-based CRM platform used by companies to manage customers, leads, sales opportunities, and support cases.
+* **Extract**
+* **Transform**
+* **Load**
 
-CRM stands for **Customer Relationship Management**, which is a system used to store and manage customer information and interactions.
+This is the common workflow used in **data migration and data pipelines**.
 
+### ETL Process
 
-### Skills/Understanding Gained
+**Extract**
+Data is collected from the source system such as databases, Excel files, APIs, or CRM systems.
 
-Basic understanding of data storage formats
-Understanding how data moves between systems
-Introduction to Salesforce and CRM systems
+**Transform**
+The data is cleaned and prepared by removing duplicates, fixing incorrect formats, correcting missing values, and standardizing the data.
+
+**Load**
+The cleaned data is inserted into the target system such as a database, data warehouse, or Salesforce.
+
+I also learned about **Salesforce**, which is a **cloud-based CRM platform** used by companies to manage customers, leads, sales opportunities, and support cases.
+
+**CRM** stands for **Customer Relationship Management**, which is a system used to store and manage customer information and interactions.
 
 ---
 
-## Day 2 – Salesforce Data Migration Concepts
+### Skills / Understanding Gained
+
+* Basic understanding of data storage formats
+* Understanding how data moves between systems
+* Introduction to Salesforce and CRM systems
+
+---
+
+# Day 2 – Salesforce Data Migration Concepts and SQL Transformations
 
 **Date:** 13 March 2026
 
-Today I learned more about Salesforce data migration concepts and the tools used for moving data into Salesforce systems. Salesforce stores business information in objects such as Accounts, Contacts, Leads, Opportunities, and Cases. These objects act like tables in a database and help companies manage customers, sales deals, and support activities.
+Today I continued learning about **Salesforce data migration concepts** and tools used for moving data into Salesforce systems.
 
-I learned that during data migration it is important to perform **field mapping**, which means matching fields from the source system to the corresponding fields in Salesforce. For example, a “Name” column from an Excel file might map to the “First Name” field in Salesforce.
+Salesforce stores business information in **objects** such as:
 
-I also explored common tools used for Salesforce data migration. Some of these include **Salesforce Data Import Wizard**, **Data Loader**, and ETL tools such as MuleSoft, Talend, and Informatica. Data Loader is especially useful for importing, exporting, updating, or deleting large amounts of Salesforce data using CSV files. A CSV file is a simple file format used to store tabular data in rows and columns.
+* Accounts
+* Contacts
+* Leads
+* Opportunities
+* Cases
 
-Another concept I learned is the difference between **batch data migration** and **real-time data integration**. Batch migration moves data in groups at scheduled times, such as uploading records daily. Real-time integration moves data immediately when an event occurs, such as creating a lead in Salesforce when a user submits a form on a website.
+These objects work similarly to **tables in a database** and help companies manage customers, sales processes, and support activities.
 
-I also studied the role of **Salesforce APIs**, which allow different applications to automatically send or receive data from Salesforce. APIs are important for integrations between systems.
+I learned that during migration it is important to perform **field mapping**, which means matching fields from the source system to the correct fields in Salesforce.
 
-Additionally, I learned about common challenges during data migration such as duplicate records, incorrect formats, missing data, and incorrect field mappings. Another important concept is the **migration order of Salesforce objects**, because some objects depend on others. For example, Accounts must be created before Contacts since contacts belong to accounts.
+Example:
 
-I further explored the role of **Datamatter Technologies**, which provides a platform to help companies migrate, manage, and protect data between systems. The platform includes modules like **Gravity** for data migration, **Echo** for backup and recovery, and **Nexus** for workflow orchestration.
+```
+Excel Column → Salesforce Field
+Name → First Name
+Email → Email
+Company → Account
+```
 
+---
 
-### Key Concepts Learned
+## Salesforce Migration Tools
 
-Salesforce Objects
+I explored common tools used for Salesforce data migration such as:
+
+* **Salesforce Data Import Wizard**
+* **Salesforce Data Loader**
+* **ETL Tools**
+
+  * MuleSoft
+  * Talend
+  * Informatica
+
+**Data Loader** is commonly used to:
+
+* Import data
+* Export data
+* Update records
+* Delete records
+
+It usually works with **CSV files**, which store tabular data in rows and columns.
+
+---
+
+## Batch vs Real-Time Data Migration
+
+### Batch Migration
+
+Data is moved in groups at scheduled times.
+
+Example:
+
+* Daily uploads
+* Nightly data transfers
+
+### Real-Time Integration
+
+Data moves immediately when an event occurs.
+
+Example:
+
+A user submits a website form → A lead is instantly created in Salesforce.
+
+---
+
+## Salesforce APIs
+
+I also studied **Salesforce APIs**, which allow applications to automatically **send and receive data from Salesforce**.
+
+APIs are important for **system integrations**, where multiple applications communicate with Salesforce.
+
+---
+
+## Challenges in Data Migration
+
+Common challenges include:
+
+* Duplicate records
+* Incorrect data formats
+* Missing data
+* Incorrect field mappings
+
+I also understood that **migration order is important** because Salesforce objects have relationships.
+
+Example:
+
+```
+Account → Contact
+```
+
+Accounts must be created first because **contacts belong to accounts**.
+
+---
+
+## Datamatter Technologies Platform
+
+I explored the **Datamatter Technologies platform**, which helps companies migrate, manage, and protect data between systems.
+
+Datamatter includes modules such as:
+
+* **Gravity** → Data migration
+* **Echo** → Backup and recovery
+* **Nexus** → Workflow orchestration
+
+### Typical Datamatter Workflow
+
+```
+Source System
+      ↓
+Extract Data
+      ↓
+Validate / Clean Data
+      ↓
 Field Mapping
-Data Loader
-CSV Files
-Batch Migration
-Real-Time Integration
-Salesforce APIs
-Migration Challenges
-Migration Order in Salesforce
-Data Pipelines
+      ↓
+Load into Salesforce
+```
 
+---
+
+# SQL Concepts Learned
+
+Along with Salesforce migration concepts, I also studied **SQL techniques used for data transformations and calculations**.
+
+---
+
+## 1. WITH Clause (Common Table Expression)
+
+SQL cannot reference a column alias in the same `SELECT` statement where it is defined.
+
+The **WITH clause** helps break complex queries into smaller steps.
+
+Example:
+
+```sql
+WITH step_1 AS (
+    SELECT *,
+           (col_a * col_b) - col_c AS intermediate
+    FROM table_name
+)
+SELECT *,
+       SAFE_DIVIDE(100 * intermediate, col_a * col_b) AS ratio
+FROM step_1;
+```
+
+---
+
+## 2. Scalar Subqueries
+
+Aggregate functions such as `SUM()` combine rows and return a single value.
+
+A **scalar subquery** calculates the aggregate separately and returns one value that each row can use.
+
+Example:
+
+```sql
+SELECT *,
+       col_a - (SELECT AGG_FUNC(col_a) FROM table_name) AS result
+FROM table_name;
+```
+
+---
+
+## 3. Percent of Total Calculation
+
+This technique shows how much each value contributes to the total.
+
+Example:
+
+```sql
+SELECT *,
+       100 * col_a / (SELECT SUM(col_a) FROM table_name) AS col_a_pot
+FROM table_name;
+```
+
+---
+
+## 4. Rounding Functions
+
+The `ROUND()` function controls decimal places in calculations.
+
+Example:
+
+```sql
+SELECT *,
+       ROUND(100 * col_a / col_b, 2) AS percentage
+FROM table_name;
+```
+
+This improves readability of numerical results.
+
+---
+
+# Key Concepts Learned
+
+* Salesforce Objects
+* Field Mapping
+* Data Loader
+* CSV Files
+* Batch Migration
+* Real-Time Integration
+* Salesforce APIs
+* Migration Challenges
+* Migration Order in Salesforce
+* Datamatter Platform Modules
+* WITH Clause (CTE)
+* Scalar Subqueries
+* Percent of Total Calculations
+* Rounding Functions in SQL
+* Data Transformation Using SQL
+
+---
