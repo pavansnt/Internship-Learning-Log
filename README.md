@@ -251,3 +251,237 @@ This improves readability of numerical results.
 * Data Transformation Using SQL
 
 ---
+Here is a **clean and concise notes version** for your **Day 3 learning**. I removed unnecessary explanations and kept only the **important concepts** so it is easy to **revise later**.
+
+---
+
+# Day 3 – Datamatter Gravity 
+
+## 1. What is Datamatter Gravity?
+
+Datamatter Gravity is a **data migration platform developed by Datamatter Technologies**.
+It is used to move data from **source systems (ERP, databases, files, CRM)** to **target systems like Salesforce or cloud platforms**.
+
+Example migration flow:
+
+```
+Source System
+     ↓
+Datamatter Gravity
+     ↓
+Salesforce / Cloud Database
+```
+
+Gravity automates the migration process and reduces manual work such as scripting, data cleaning, and validation.
+
+---
+
+# 2. Problems in Data Migration
+
+Common challenges in migration:
+
+* Different systems store data differently
+* Field names do not match
+* Data quality issues (duplicates, missing values)
+* Complex relationships between tables
+* Large datasets
+
+Gravity solves these problems using automation tools.
+
+---
+
+# 3. Key Capabilities of Gravity
+
+### Intelligent Data Processing
+
+Gravity helps prepare data before migration.
+
+**AI-powered mapping**
+
+* Automatically suggests mapping between source fields and target fields.
+
+Example:
+
+| Source     | Target     |
+| ---------- | ---------- |
+| cust_name  | First Name |
+| cust_email | Email      |
+
+---
+
+### Data Quality Management
+
+Gravity helps clean and standardize data before migration.
+
+Examples of fixes:
+
+* remove duplicate records
+* fix incorrect formatting
+* validate required fields
+* normalize values
+
+---
+
+### Data Transformation
+
+Transforms source data to match target structure.
+
+Example:
+
+```
+FullName → First Name + Last Name
+```
+
+---
+
+# 4. Migration Lifecycle (ETL)
+
+Gravity manages the full **ETL process**.
+
+**Extract**
+
+* Data is extracted from source systems such as databases, ERP systems, or files.
+
+**Transform**
+
+* Data is cleaned, formatted, and converted to match the target system.
+
+**Load**
+
+* Processed data is loaded into the target system such as Salesforce.
+
+**Validate**
+
+* Ensures data accuracy and integrity after migration.
+
+---
+
+# 5. Enterprise Features
+
+### Environment Management
+
+Migration is tested across different environments:
+
+```
+DEV → QA → UAT → PROD
+```
+
+---
+
+### Pipeline Orchestration
+
+Migration steps are organized as a **pipeline workflow**.
+
+Example pipeline:
+
+```
+Extract → Clean → Transform → Map → Validate → Load
+```
+
+---
+
+### Audit Trail
+
+Gravity records migration activities such as:
+
+* migration start
+* records processed
+* errors detected
+* migration completion
+
+---
+
+### Error Handling
+
+Gravity detects and manages migration errors such as:
+
+* missing fields
+* invalid formats
+* relationship issues
+
+Failed records can be reviewed and reprocessed.
+
+---
+
+# 6. Core Components
+
+### Migration Workspace
+
+Central interface used to manage migration projects.
+
+---
+
+### Pipeline Tabs
+
+Each tab represents a stage of migration.
+
+Important tabs:
+
+* **Summary** – project overview and files
+* **Extract** – explore source data
+* **Relationship** – manage dependencies between objects
+* **Filter** – select required data
+* **Cleanup** – fix data quality issues
+* **Transform** – modify data format
+* **Mapping** – map source fields to target fields
+* **Validation** – check migration readiness
+* **Load** – execute migration
+* **Error Handling** – review and fix failed records
+* **Pipeline** – manage overall migration workflow
+
+---
+
+# 7. Supported Systems
+
+**Source systems**
+
+* ERP systems
+* CRM platforms
+* Databases (SQL Server, Oracle, MySQL, PostgreSQL)
+* File systems (CSV, Excel, XML)
+
+**Target systems**
+
+* Salesforce
+* Microsoft Dynamics
+* Cloud databases
+* Data warehouses
+* Custom applications via APIs
+
+---
+
+# 8. Typical Migration Workflow
+
+```
+Source System
+     ↓
+Extract Data
+     ↓
+Clean / Transform Data
+     ↓
+Field Mapping
+     ↓
+Validation
+     ↓
+Load to Target System
+```
+
+---
+
+# Concepts Learned Today
+
+* Datamatter Gravity platform
+* Data migration challenges
+* AI-powered field mapping
+* Data quality management
+* Data transformation
+* ETL lifecycle (Extract, Transform, Load, Validate)
+* Migration pipelines
+* Environment management (DEV, QA, UAT, PROD)
+* Audit trail and error handling
+* Migration workspace
+* Pipeline tabs and their functions
+* Supported source and target systems
+* Typical data migration workflow
+
+---
