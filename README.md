@@ -160,81 +160,6 @@ Accounts must be created first because **contacts belong to accounts**.
 
 ---
 
----
-
-# SQL Concepts Learned
-
-Along with Salesforce migration concepts, I also studied **SQL techniques used for data transformations and calculations**.
-
----
-
-## 1. WITH Clause (Common Table Expression)
-
-SQL cannot reference a column alias in the same `SELECT` statement where it is defined.
-
-The **WITH clause** helps break complex queries into smaller steps.
-
-Example:
-
-```sql
-WITH step_1 AS (
-    SELECT *,
-           (col_a * col_b) - col_c AS intermediate
-    FROM table_name
-)
-SELECT *,
-       SAFE_DIVIDE(100 * intermediate, col_a * col_b) AS ratio
-FROM step_1;
-```
-
----
-
-## 2. Scalar Subqueries
-
-Aggregate functions such as `SUM()` combine rows and return a single value.
-
-A **scalar subquery** calculates the aggregate separately and returns one value that each row can use.
-
-Example:
-
-```sql
-SELECT *,
-       col_a - (SELECT AGG_FUNC(col_a) FROM table_name) AS result
-FROM table_name;
-```
-
----
-
-## 3. Percent of Total Calculation
-
-This technique shows how much each value contributes to the total.
-
-Example:
-
-```sql
-SELECT *,
-       100 * col_a / (SELECT SUM(col_a) FROM table_name) AS col_a_pot
-FROM table_name;
-```
-
----
-
-## 4. Rounding Functions
-
-The `ROUND()` function controls decimal places in calculations.
-
-Example:
-
-```sql
-SELECT *,
-       ROUND(100 * col_a / col_b, 2) AS percentage
-FROM table_name;
-```
-
-This improves readability of numerical results.
-
----
-
 # Key Concepts Learned
 
 * Salesforce Objects
@@ -244,14 +169,6 @@ This improves readability of numerical results.
 * Batch Migration
 * Real-Time Integration
 * Migration Challenges
-* WITH Clause (CTE)
-* Scalar Subqueries
-* Percent of Total Calculations
-* Rounding Functions in SQL
-* Data Transformation Using SQL
-
----
-Here is a **clean and concise notes version** for your **Day 3 learning**. I removed unnecessary explanations and kept only the **important concepts** so it is easy to **revise later**.
 
 ---
 
