@@ -540,18 +540,6 @@ After configuring the Connected App, I attempted the connection again, but the s
 
 ---
 
-### 3. Identifying the Missing Configuration
-Based on Abhishek Sir’s suggestion, I then connected with **Ankit Sir** to further analyze the problem. He reviewed the Salesforce setup configuration and identified the exact issue.
-
-The missing configuration was in the Salesforce settings:
-Identity → OAuth and OpenID Connect Settings → OAuth Username-Password Flows
-
-This option was **not enabled**, which was preventing the authentication process from completing successfully.
-
-After enabling the **OAuth Username-Password Flow**, the authentication issue was resolved and the connection between Datamatter Gravity and Salesforce was successfully established.
-
----
-
 ### 4. Progress on Order Object Migration
 Once the connection issue was resolved, I proceeded with the next task of adding another object for migration, which was the **Order object**. 
 
