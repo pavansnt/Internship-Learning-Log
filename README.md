@@ -485,3 +485,100 @@ Load to Target System
 * Typical data migration workflow
 
 ---
+
+# Internship Diary – Day 4
+
+## Objective
+The objective of the fourth day was to migrate **Customer object data** from the source dataset to Salesforce using the Datamatter Gravity platform and understand the mapping process between source fields and Salesforce fields.
+
+---
+
+## Work Done
+
+### 1. Customer Data Migration Attempt
+On this day, I worked on migrating the **Customer object dataset** into Salesforce. The migration pipeline included reviewing metadata, transformation rules, and especially the **mapping stage**, where each source field must be mapped to a corresponding Salesforce field.
+
+---
+
+### 2. Issue with Field Mapping
+During the mapping process, we encountered a problem where some fields were being mapped incorrectly. The system automatically suggested mappings that linked certain source fields to unrelated Salesforce fields. 
+
+After analyzing the issue, we identified that this was actually a **bug in the mapping suggestion system**, which was incorrectly recommending target fields for some attributes.
+
+This required manually reviewing and correcting the field mappings.
+
+---
+
+### 3. Mistake Identified During Migration
+Another issue occurred due to a mistake from my side. I had included the **customer_id** field from the source dataset in the migration mapping.
+
+However, Salesforce automatically generates a **unique system ID** for each record when data is inserted. Because of this, the `customer_id` field should not be migrated as a system identifier.
+
+Including this field caused confusion during the migration process. Once we understood this behavior, we removed the `customer_id` field from the mapping configuration.
+
+---
+
+## Key Learnings
+
+- Salesforce automatically generates record **IDs**, so they should not be migrated from external datasets.
+- Careful review of **field mapping** is necessary before executing data migration.
+- Automated mapping suggestions may not always be correct and should be validated manually.
+- Understanding the **target system’s data model** is important for successful data migration.
+
+---
+
+## Outcome
+By the end of the day, the issue with incorrect mapping was identified and the migration configuration was updated by removing the unnecessary `customer_id` field. This helped improve my understanding of how Salesforce handles record identifiers and how to properly configure migration pipelines.
+
+---
+# Internship Diary – Day 5
+
+## Objective
+The objective of the fifth day was to extend the migration process by attempting to migrate another object, **Order**, into Salesforce using the Datamatter Gravity platform.
+
+---
+
+## Work Done
+
+### 1. Attempt to Add Order Object
+On this day, I tried to configure and migrate a new object called **Order** to Salesforce. The goal was to understand how multiple objects can be migrated and how relationships between objects can be handled during migration.
+
+---
+
+### 2. Authentication Error During Connection
+While attempting to connect Datamatter Gravity with Salesforce, I encountered an error during the connection process:
+- Error Code: 424 (Authentication Failed)
+
+This error prevented the system from establishing communication with Salesforce, and therefore the migration process could not proceed further.
+
+---
+
+### 3. Troubleshooting Steps
+Initially, I was using **Amit Sir’s Salesforce credentials** to perform the connection. When the authentication issue occurred, I tried several troubleshooting steps.
+
+First, I attempted to create my **own Salesforce account** and tried connecting again using my credentials. However, the same authentication error still occurred.
+
+To resolve this issue, I discussed the problem with **Abhishek Sir and Vaishnavi Ma'am**. They suggested several modifications during the Salesforce setup process, including reviewing the connected app configuration, OAuth settings, and authentication parameters.
+
+Following their suggestions, I carefully rechecked the setup and attempted the connection again.
+
+---
+
+### 4. Additional Troubleshooting
+Even after implementing the suggestions from **Abhishek Sir**, I continued troubleshooting the issue by reviewing documentation and also consulting **ChatGPT** for possible configuration fixes.
+
+Despite trying multiple solutions throughout the day, the authentication error persisted and the connection could not be successfully established.
+
+---
+
+## Key Learnings
+
+- Understood how **Salesforce setup and connected app configuration** works.
+- Learned about **OAuth authentication and API connection setup** in Salesforce.
+- Gained practical experience in troubleshooting **authentication and integration errors**.
+- Became more familiar with the **Salesforce setup environment and configuration process**.
+
+---
+
+## Outcome
+Although the migration was not successfully completed due to the authentication error (424), the day was productive in terms of learning. I gained a better understanding of Salesforce setup.
