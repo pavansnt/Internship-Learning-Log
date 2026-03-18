@@ -499,3 +499,75 @@ Despite trying multiple solutions throughout the day, the authentication error p
 
 ## Outcome
 Although the migration was not successfully completed due to the authentication error (424), the day was productive in terms of learning. I gained a better understanding of Salesforce setup.
+
+---
+
+# Internship Diary – Day 6
+
+## Objective
+The objective of the sixth day was to resolve the authentication issue encountered while connecting Datamatter Gravity with Salesforce and continue the work on migrating the **Order object**.
+
+---
+
+## Work Done
+
+### 1. Authentication Error (Error 424)
+At the beginning of the day, I was still facing the same authentication problem while connecting the system. The error message displayed was:
+- Error 424 – Authentication Failed
+
+This prevented Datamatter Gravity from establishing a connection with Salesforce.
+
+---
+
+### 2. Troubleshooting with Abhishek Sir
+To resolve this issue, I discussed the problem with **Abhishek Sir**. He carefully analyzed the configuration and helped troubleshoot the issue step by step. 
+
+Before this discussion, I had created an **External Client App** in Salesforce. However, it turned out that for this integration I actually needed to create a **Connected App** instead.
+
+Following this realization, I created the Connected App using the correct path in Salesforce:
+Setup → Connected Apps → Manage Connected Apps → New Connected App
+
+After configuring the Connected App, I attempted the connection again, but the same authentication error was still occurring.
+
+---
+
+### 3. Identifying the Missing Configuration
+Based on Abhishek Sir’s suggestion, I then connected with **Ankit Sir** to further analyze the problem. He reviewed the Salesforce setup configuration and identified the exact issue.
+
+The missing configuration was in the Salesforce settings:
+
+After configuring the Connected App, I attempted the connection again, but the same authentication error was still occurring.
+
+---
+
+### 3. Identifying the Missing Configuration
+Based on Abhishek Sir’s suggestion, I then connected with **Ankit Sir** to further analyze the problem. He reviewed the Salesforce setup configuration and identified the exact issue.
+
+The missing configuration was in the Salesforce settings:
+Identity → OAuth and OpenID Connect Settings → OAuth Username-Password Flows
+
+This option was **not enabled**, which was preventing the authentication process from completing successfully.
+
+After enabling the **OAuth Username-Password Flow**, the authentication issue was resolved and the connection between Datamatter Gravity and Salesforce was successfully established.
+
+---
+
+### 4. Progress on Order Object Migration
+Once the connection issue was resolved, I proceeded with the next task of adding another object for migration, which was the **Order object**. 
+
+During this stage, I configured the object and worked on the **field mapping process**. The fields were mapped correctly today, and the migration setup for the Order object is currently **in progress**.
+
+---
+
+## Key Learnings
+
+- Learned the difference between **External Client App and Connected App** in Salesforce integrations.
+- Understood how **OAuth authentication settings** impact API integrations.
+- Identified that enabling **OAuth Username-Password Flow** is necessary for certain authentication methods.
+- Gained practical experience troubleshooting **integration and authentication errors** in Salesforce.
+- Improved understanding of **object mapping during data migration**.
+
+---
+
+## Outcome
+By the end of the day, the authentication issue that had been occurring for multiple days was successfully resolved. I was able to establish a connection with Salesforce and proceed with configuring the **Order object migration**, which is currently ongoing.
