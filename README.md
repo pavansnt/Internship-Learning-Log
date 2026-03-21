@@ -562,6 +562,8 @@ By the end of the day, the authentication issue that had been occurring for mult
 
 ---
 
+---
+
 # 📘 Internship Learning – Day 7
 
 ## 🎯 Objective
@@ -572,18 +574,36 @@ Today, I worked on migrating multiple objects and understanding relationships be
 
 ## 🔧 Work Done
 
-Today, I experimented with different objects such as **Customer (Contact)** and **Order** to understand how data migration works with relationships.
+Today, I first attempted to migrate the **Customer (Contact) object**, and it was **successfully completed**. This helped me gain confidence in handling basic data migration.
 
-While working on this, I faced multiple errors during the process:
+After that, I tried working with another object, **Order (child object)**, to understand how relationships work between objects in Salesforce.
 
-* Incorrect field mapping (AI mapped fields wrongly like mapping external ID to Salesforce ID)
-* Metadata issues (fields not visible until refresh)
+During this process, I faced multiple issues and errors:
+
+* Incorrect field mapping (AI mapped fields wrongly, such as mapping external ID to Salesforce ID)
+* Metadata issues (fields were not visible until I refreshed metadata)
 * Data format issues (date vs datetime mismatch)
+* Faced difficulty while working with **child object (Order)**
 
-To resolve these issues, I learned to:
-* Create **custom fields** in Salesforce (like `Customer_External_Id__c`)
-* Mark fields as **External ID** for proper mapping
-* Refresh metadata to sync fields
+---
+
+## ❗ Additional Issue Faced
+
+While mapping fields for Order, I encountered another error:
+
+```text
+total_amount → Read-Only Field
+```
+
+### 🔍 Reason
+
+* Some standard Salesforce fields are **read-only**
+* These fields cannot be inserted or updated during migration
+
+### ✅ Solution
+
+* I created a **custom field** in Salesforce to store the value
+* Then mapped the dataset field to this custom field instead
 
 ---
 
@@ -626,6 +646,7 @@ Account → Contact (Customer) → Order
 
 * Tried migrating **Order object without proper Account linkage**
 * Did not follow correct migration sequence
+* Faced difficulty in handling **child object migration**
 
 ---
 
@@ -646,20 +667,24 @@ Account → Contact (Customer) → Order
 * **Account is mandatory** for Contact and Order
 * External IDs are essential for linking data
 * Migration must follow **correct sequence**
+* Some fields are **read-only and require custom fields**
 * Errors like `REQUIRED_FIELD_MISSING` indicate missing relationships
 * Proper data modeling is crucial before migration
+* Child object migration is more complex than parent object
 
 ---
 
 ## 🚀 Outcome
 
-Although I was not able to successfully complete the Order migration today, I gained a clear understanding of:
+Although I was not able to successfully complete the Order migration today, I:
 
-* Salesforce data hierarchy
-* Importance of relationships
-* Correct migration order
-* Handling real-world migration errors
+* Successfully migrated the **Customer object**
+* Understood how to handle **read-only field issues**
+* Gained clarity on **Salesforce data hierarchy and relationships**
+* Learned the importance of **correct migration order and dependencies**
+* Improved my understanding of handling **real-world migration errors**
 
 ---
+
 
 
