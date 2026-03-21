@@ -607,6 +607,14 @@ total_amount → Read-Only Field
 
 ---
 
+##Picklist Issue
+* Salesforce Status field is dynamic
+* But my dataset had fixed values:
+```text
+ pending, completed, cancelled
+```
+✔ Solution: Need to match picklist values or create custom field
+
 ## ❗ Major Issue Faced
 
 While trying to migrate the **orders.csv (Order object)**, I encountered the error:
