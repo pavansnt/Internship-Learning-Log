@@ -559,3 +559,107 @@ During this stage, I configured the object and worked on the **field mapping pro
 
 ## Outcome
 By the end of the day, the authentication issue that had been occurring for multiple days was successfully resolved. I was able to establish a connection with Salesforce and proceed with configuring the **Order object migration**, which is currently ongoing.
+
+---
+
+# 📘 Internship Learning – Day 7
+
+## 🎯 Objective
+
+Today, I worked on migrating multiple objects and understanding relationships between them in Salesforce using Datamatter.
+
+---
+
+## 🔧 Work Done
+
+Today, I experimented with different objects such as **Customer (Contact)** and **Order** to understand how data migration works with relationships.
+
+While working on this, I faced multiple errors during the process:
+
+* Incorrect field mapping (AI mapped fields wrongly like mapping external ID to Salesforce ID)
+* Metadata issues (fields not visible until refresh)
+* Data format issues (date vs datetime mismatch)
+
+To resolve these issues, I learned to:
+* Create **custom fields** in Salesforce (like `Customer_External_Id__c`)
+* Mark fields as **External ID** for proper mapping
+* Refresh metadata to sync fields
+
+---
+
+## ❗ Major Issue Faced
+
+While trying to migrate the **orders.csv (Order object)**, I encountered the error:
+
+```text
+REQUIRED_FIELD_MISSING: Select an account
+```
+
+---
+
+## 🔍 Root Cause Analysis
+
+After analyzing the issue, I understood the actual reason:
+
+👉 Salesforce requires **Account as a mandatory parent object**
+
+* A **Contact (Customer)** must be linked to an Account
+* An **Order** must also be linked to an Account
+
+---
+
+## 🧠 Key Concept Learned
+
+```text
+Salesforce Relationship Structure:
+Account → Contact (Customer) → Order
+```
+
+👉 This means:
+
+* We cannot directly create Orders without Account
+* Proper **data hierarchy and order of migration** is required
+
+---
+
+## 🚫 Mistake Made
+
+* Tried migrating **Order object without proper Account linkage**
+* Did not follow correct migration sequence
+
+---
+
+## ✅ Correct Approach
+
+```text
+1. Create Account data  
+2. Load Account into Salesforce  
+3. Load Customer (Contact) linked to Account  
+4. Load Orders linked to Customer (and Account)
+```
+
+---
+
+## 📚 Key Learnings
+
+* Salesforce enforces **strict parent-child relationships**
+* **Account is mandatory** for Contact and Order
+* External IDs are essential for linking data
+* Migration must follow **correct sequence**
+* Errors like `REQUIRED_FIELD_MISSING` indicate missing relationships
+* Proper data modeling is crucial before migration
+
+---
+
+## 🚀 Outcome
+
+Although I was not able to successfully complete the Order migration today, I gained a clear understanding of:
+
+* Salesforce data hierarchy
+* Importance of relationships
+* Correct migration order
+* Handling real-world migration errors
+
+---
+
+
