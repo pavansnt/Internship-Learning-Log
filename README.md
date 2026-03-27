@@ -694,5 +694,248 @@ Although I was not able to successfully complete the Order migration today, I:
 
 ---
 
+# Internship Learning 
+
+# 📘 Learning – Salesforce Data Migration & Object Relationships
+
+## 🧠 Overview
+Today I worked on understanding Salesforce objects, data migration, and how different objects are connected in a real business scenario. I practiced using multiple objects such as Account, Contact (Customer), Opportunity, Order, and Case to simulate how a real company manages its sales and service processes.
+
+---
+
+## 🏢 Understanding Salesforce Structure
+
+I learned that Salesforce follows a **structured data model**:
+Account → Contact → Opportunity → Order → Case
+
+
+- **Account** = Parent object (company/customer)
+- **Contact** = Person (customer)
+- **Opportunity** = Sales deal
+- **Order** = Purchase
+- **Case** = Support issue
+
+👉 Data must always be inserted in this order.
+
+---
+
+## 🔗 Entity–Relationship (ER Concept)
+
+- **Entity** = Object (like Account, Contact)
+- **Relationship** = Connection between objects
+
+Example:
+- Contact belongs to Account  
+- Order belongs to Account  
+
+👉 This is how data is organized in Salesforce.
+
+---
+
+## ⚙️ Data Migration Practice
+
+I worked on uploading datasets and mapping fields correctly.
+
+### Key Learning:
+- Account must exist first  
+- Child objects must be linked to Account  
+- Proper mapping is required for successful migration  
+
+---
+
+## 🔑 External ID
+
+I understood that:
+
+- External ID is used to store my system IDs (like `A001`)
+- It helps Salesforce match records without using Salesforce-generated IDs
+
+Example:
+External_Account_ID__c = A001
+
+
+👉 Used for linking data across systems
+
+---
+
+## 🔗 Foreign Key vs Lookup
+
+### ✅ Foreign Key
+- Used to **find and match records**
+- Example:
+- account_external_id → Account.External_Account_ID__c
+- - Mandatory for migration
+
+---
+
+### ⚠️ Lookup
+- Used to **create optional relationships**
+- Not always required
+- In my case, it was not needed
+
+---
+
+### 💡 Important Realization
+
+In my tool:
+
+> Foreign Key handled both **finding and linking**
+
+So Lookup was not required in my scenario.
+
+---
+
+## ❌ Errors Faced & Fixes
+
+### 1. REQUIRED_FIELD_MISSING: Select an account
+- ❌ Cause: Account not linked
+- ✅ Fix: Proper foreign key mapping
+
+---
+
+### 2. INVALID_FIELD_FOR_INSERT_UPDATE
+- ❌ Cause: Trying to insert into system field
+- ✅ Fix: Remove or use custom field
+
+---
+
+### 3. Wrong Mapping
+- ❌ Used wrong field (Customer ID instead of Account ID)
+- ✅ Fixed by matching correct IDs
+
+---
+
+### 4. Upload Order Issue
+- ❌ Uploaded child before parent
+- ✅ Correct order followed
+
+---
+
+## 🔄 Sales vs Service Understanding
+
+### Sales Objects:
+- Account
+- Contact
+- Opportunity
+
+### Service Objects:
+- Case
+- Support-related data
+
+### Common Objects:
+- Account
+- Contact
+
+---
+
+## 🧠 Key Takeaways
+
+- Salesforce is both a **business system + database**
+- Data must follow **parent-child structure**
+- **Foreign Key is critical** for migration
+- **External ID acts as bridge** between systems
+- Lookup is optional and not always required
+- Correct mapping and order are very important
+
+---
+
+## 🚀 Final Understanding
+
+> Salesforce works on structured relationships.  
+> If relationships are not properly defined, data migration will fail.
+
+Today I gained a clear understanding of:
+- Object relationships  
+- Data migration process  
+- Real-world Salesforce data flow  
+
+---
+- Mandatory for migration
+
+---
+
+### ⚠️ Lookup
+- Used to **create optional relationships**
+- Not always required
+- In my case, it was not needed
+
+---
+
+### 💡 Important Realization
+
+In my tool:
+
+> Foreign Key handled both **finding and linking**
+
+So Lookup was not required in my scenario.
+
+---
+
+## ❌ Errors Faced & Fixes
+
+### 1. REQUIRED_FIELD_MISSING: Select an account
+- ❌ Cause: Account not linked
+- ✅ Fix: Proper foreign key mapping
+
+---
+
+### 2. INVALID_FIELD_FOR_INSERT_UPDATE
+- ❌ Cause: Trying to insert into system field
+- ✅ Fix: Remove or use custom field
+
+---
+
+### 3. Wrong Mapping
+- ❌ Used wrong field (Customer ID instead of Account ID)
+- ✅ Fixed by matching correct IDs
+
+---
+
+### 4. Upload Order Issue
+- ❌ Uploaded child before parent
+- ✅ Correct order followed
+
+---
+
+## 🔄 Sales vs Service Understanding
+
+### Sales Objects:
+- Account
+- Contact
+- Opportunity
+
+### Service Objects:
+- Case
+- Support-related data
+
+### Common Objects:
+- Account
+- Contact
+
+---
+
+## 🧠 Key Takeaways
+
+- Salesforce is both a **business system + database**
+- Data must follow **parent-child structure**
+- **Foreign Key is critical** for migration
+- **External ID acts as bridge** between systems
+- Lookup is optional and not always required
+- Correct mapping and order are very important
+
+---
+
+## 🚀 Final Understanding
+
+> Salesforce works on structured relationships.  
+> If relationships are not properly defined, data migration will fail.
+
+Today I gained a clear understanding of:
+- Object relationships  
+- Data migration process  
+- Real-world Salesforce data flow  
+
+---
+
 
 
