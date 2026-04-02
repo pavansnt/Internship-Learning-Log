@@ -936,6 +936,14 @@ Today I gained a clear understanding of:
 - Real-world Salesforce data flow  
 
 ---
+---
 
+# 📘 Learning of the day - four objects
 
+Today, I worked on migrating multiple objects in Salesforce using Datamatter. I successfully loaded and migrated data for four objects: Account, Contact, Opportunity, and Product. During this process, I faced a duplicate records issue while reloading Account and Contact data, because I had already inserted similar records in a previous attempt. To resolve this, I removed the earlier data (by recreating the field) and then reloaded the data successfully. After that, I was able to complete the migration up to the Opportunity object without issues.
 
+While working on the Product object, I faced another challenge where I needed a Category field, but the existing field mapping was not suitable (I initially tried mapping it with the Type field). To fix this, I created a custom field for Category in Salesforce and then mapped it correctly. After this change, the Product object was successfully loaded. However, in the error tab, I still noticed some errors, which I later understood were from my previous failed attempts.
+
+Overall, today’s learning helped me understand how to handle duplicate data issues, the importance of correct field mapping, and when to create custom fields during migration
+
+---
