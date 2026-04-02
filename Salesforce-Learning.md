@@ -49,4 +49,22 @@ Additionally, I learned about different types of **relationships between objects
 Overall, today’s learning provided me with both conceptual understanding and hands-on experience in Salesforce. I now have a clear idea of how to design data models, create custom objects and fields, manage records, and define relationships between objects. This has strengthened my foundation in Salesforce and prepared me for more advanced concepts in the future.
 
 ---
+---
+
+# 📘 Learning of the Day – Schema Builder in Salesforce
+
+Today, I learned about **Schema Builder**, which is a powerful tool in Salesforce used to **visualize and design the data model**. As the number of objects, fields, and relationships increases, it becomes difficult to understand the structure. Schema Builder helps solve this by providing a **visual representation** of how all objects are connected.
+
+I understood that Schema Builder allows me to **see my entire data model in one place**, including objects like Contact, Property, Offer, and others. By using features like Auto-Layout and drag-and-drop, I can organize objects on the screen in a way that makes it easier to understand relationships and data flow. This is especially useful when explaining the system to others or analyzing complex structures.
+
+Another important learning is that Schema Builder is not just for viewing but also for **editing and creating components**. I learned how to create a new object directly by dragging the object element onto the canvas, entering details, and saving it. This makes the design process faster and more interactive compared to traditional methods.
+
+I also learned how to **create fields using Schema Builder**. By selecting a field type and dragging it onto an object, I can easily add different types of fields such as standard fields, formula fields, and relationship fields. This visual approach makes it easier to understand where fields belong and how they connect to other objects.
+
+Through this unit, I realized that Schema Builder simplifies the process of **data modeling** by allowing both visualization and customization in one place. It helps in designing, modifying, and understanding the system more effectively.
+
+Overall, today’s learning helped me understand how to use Schema Builder to visualize relationships, create objects, and add fields, making data modeling in Salesforce more intuitive and efficient.
+
+---
+
 
