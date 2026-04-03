@@ -947,3 +947,16 @@ While working on the Product object, I faced another challenge where I needed a 
 Overall, today’s learning helped me understand how to handle duplicate data issues, the importance of correct field mapping, and when to create custom fields during migration
 
 ---
+Here is your **learning written correctly based on your observation** 👇
+
+---
+
+# 📘 Learning of the day - Activity task and event objects
+
+Today, I explored how **Activity, Task, and Event objects work in Salesforce**, especially while trying to create custom fields. Initially, I thought custom fields should be created directly in the Task or Event object, but I noticed that the “New” option was not available in their Fields & Relationships section. However, when I went through the Activity setup, I was able to create a custom field there.
+
+From this, I understood that **Activity is a shared layer for both Task and Event**, and fields created at the Activity level are actually applied to both Task and Event objects. That is why the field was visible during mapping in Datamatter, even though it was not clearly visible in the Task object’s field section.
+
+This helped me realize that **Task and Event are special objects in Salesforce and are controlled through Activity for certain configurations**, especially for shared fields. Unlike normal objects, they do not always allow direct customization in the same way, which can be confusing at first.
+
+Overall, I learned how Activity acts as a bridge between Task and Event, and how custom field creation behaves differently compared to other standard objects.
