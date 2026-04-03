@@ -67,4 +67,40 @@ Overall, today’s learning helped me understand how to use Schema Builder to vi
 
 ---
 
+---
+
+# 📘 Learning of the Day – Data Import in Salesforce
+
+Today, I learned how to **import data into Salesforce using CSV files** with the help of the **Data Import Wizard**.
+
+I understood that Salesforce supports importing data from external sources like Excel by converting it into a **.csv file format**. This makes it easy to bring data from other systems into Salesforce. 
+
+I learned that the **Data Import Wizard** is a simple and beginner-friendly tool available in Setup. It is mainly used for importing data into standard objects like Accounts, Contacts, and Leads, as well as custom objects. It supports up to **50,000 records** and provides a step-by-step process to upload files, configure settings, and map fields.
+
+While performing the import, I followed these steps:
+
+* prepared data in CSV format
+* cleaned the data to avoid errors
+* uploaded the file in Data Import Wizard
+* mapped fields correctly between CSV and Salesforce
+* started the import and checked status
+
+I also understood that **field mapping is very important**. If fields are not mapped correctly, data will not be imported properly. Unmapped fields are ignored during import.
+
+During this process, I learned that:
+
+* data should be clean and without duplicates
+* correct format (like date, checkbox values) must be maintained
+* testing with small data is helpful before full import
+
+I also understood when to use Data Import Wizard:
+
+* when data is less than 50,000 records
+* when working with supported objects
+* when automation is not required
+
+Overall, this activity helped me understand how to **import data practically from CSV files into Salesforce**, and how important data preparation and field mapping are for successful migration.
+
+---
+
 
