@@ -103,4 +103,41 @@ Overall, this activity helped me understand how to **import data practically fro
 
 ---
 
+Here is your content written as a **“Learning of the Day – Simple & Clear”** 👇
+
+---
+
+# 📘 Learning of the Day – Data Export in Salesforce
+
+Today, I learned how to **export data from Salesforce**. Exporting data is important for creating backups or using the data in other systems.
+
+I understood that Salesforce provides **two main methods for exporting data**:
+
+👉 **Data Export Service**
+👉 **Data Loader**
+
+I learned that the **Data Export Service** is a simple tool available in Setup. It allows us to:
+
+* export data manually
+* schedule automatic exports (weekly or monthly)
+
+The data is exported in **CSV format inside a zip file**, and Salesforce sends a download link via email. This is mainly used for **backup purposes**.
+
+I also learned that **Data Loader** is a more advanced tool. It can be used to export large amounts of data and supports automation using command line and APIs. So it is useful when working with **large or complex data exports**.
+
+I understood the steps to export data using Data Export Service:
+
+* go to Setup → Data Export
+* choose Export Now or Schedule Export
+* select data to include
+* start export and download the file
+
+I also learned that:
+
+* exports can be scheduled weekly or monthly
+* files are available only for a limited time (48 hours)
+* large exports are split into multiple files
+
+---
+
 
