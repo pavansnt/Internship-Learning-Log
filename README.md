@@ -947,7 +947,6 @@ While working on the Product object, I faced another challenge where I needed a 
 Overall, today’s learning helped me understand how to handle duplicate data issues, the importance of correct field mapping, and when to create custom fields during migration
 
 ---
-Here is your **learning written correctly based on your observation** 👇
 
 ---
 
@@ -960,3 +959,28 @@ From this, I understood that **Activity is a shared layer for both Task and Even
 This helped me realize that **Task and Event are special objects in Salesforce and are controlled through Activity for certain configurations**, especially for shared fields. Unlike normal objects, they do not always allow direct customization in the same way, which can be confusing at first.
 
 Overall, I learned how Activity acts as a bridge between Task and Event, and how custom field creation behaves differently compared to other standard objects.
+
+---
+
+---
+
+# 📘 Learning of the Day – Salesforce (Accounts, Relationships & Campaigns)
+
+Today, I learned important concepts in Salesforce related to **customer data management, relationships, and marketing campaigns**, which helped me understand how real business processes are handled in CRM systems.
+
+I started by learning how Salesforce stores customer information using **Accounts and Contacts**. I understood that accounts represent companies, and contacts represent people working in those companies. This relationship is very important because it helps organize customer data properly and makes it easier to track communication and business activities. I also learned about **Person Accounts**, which are used when dealing with individual customers instead of companies. 
+
+I also understood how Salesforce helps track **customer interactions** using activities like calls and meetings. By logging these activities, businesses can maintain a complete history of communication, which improves collaboration and decision-making.
+
+Next, I learned about **different types of relationships between accounts and contacts**. One important concept is **Contacts to Multiple Accounts**, where a single contact can be related to more than one company without creating duplicate records. I also learned about **Account Hierarchy**, which shows parent-child relationships between companies and helps understand how different branches or locations are connected. Additionally, I learned about **Account Teams**, which allow multiple team members to work on the same account with different roles and access levels. 
+
+These relationship concepts help manage complex business structures and improve coordination among teams.
+
+Finally, I learned about **Salesforce Campaigns**, which are used to manage marketing activities. A campaign acts like a container that groups marketing efforts such as emails, advertisements, and events. It helps track which leads and contacts are targeted and how they respond. This allows marketing teams to measure performance, analyze results, and improve their strategies.
+
+I also learned how to create a campaign by entering details like name, type, status, budget, and expected revenue, and understood the importance of enabling the **Marketing User** option to access campaign features.
+
+Overall, today’s learning helped me understand how Salesforce connects customer data, relationships, and marketing activities in a structured way. It gave me a clear idea of how businesses use Salesforce to manage customers, collaborate internally, and track marketing performance effectively.
+
+---
+
